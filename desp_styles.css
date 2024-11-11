@@ -5,7 +5,7 @@ body {
     padding: 0;
     color: #ffffff;
     background-color: #29000b;
-    padding-top: 80px; /* Ajusta este valor según la altura de tu header */
+    padding-top: 80px;
 }
 
 /* Estilo de las secciones */
@@ -122,28 +122,9 @@ blockquote {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px 10px rgba(255, 215, 0, 0.6), 0 0 15px 5px rgba(255, 215, 0, 0.4);
 }
 
-/* Fondo con imágenes para cada tarjeta */
-.proyecto1, .proyecto2, .proyecto3 {
-    background-size: cover;
-    background-position: center;
-}
-
-.proyecto1 {
-    background-image: url('binario.jpg');
-}
-
-.proyecto2 {
-    background-image: url('tab_periodica.jpg');
-}
-
-.proyecto3 {
-    background-image: url('jselectronics.jpg');
-}
-
-/* Superposición oscura sobre la imagen de fondo */
 .project-card::before {
     content: '';
     position: absolute;
@@ -155,7 +136,6 @@ blockquote {
     z-index: 1;
 }
 
-/* Asegura que el contenido esté sobre la superposición */
 .project-card h3, .project-card p, .project-button {
     position: relative;
     z-index: 2;
@@ -172,14 +152,24 @@ blockquote {
     text-align: center;
 }
 
+/* Fondo con imágenes para cada tarjeta */
+.proyecto1 { background-image: url('binario.jpg'); }
+.proyecto2 { background-image: url('tab_periodica.jpg'); }
+.proyecto3 { background-image: url('jselectronics.jpg'); }
+
+.proyecto1, .proyecto2, .proyecto3 {
+    background-size: cover;
+    background-position: center;
+}
+
 /* Estilos para el Header */
 header {
-    background-color: #3a000f; /* Fondo rojo vino oscuro */
+    background-color: #3a000f;
     padding: 20px;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+    z-index: 1000;
 }
 
 .navbar {
@@ -216,7 +206,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #FFB700; /* Color más claro al pasar el cursor */
+    color: #FFB700;
 }
 
 /* Estilos para el contenedor de presentación */
@@ -249,8 +239,97 @@ header {
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
 }
 
+/* Estilo para el texto y botón de ver más proyectos */
+.more-projects {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.more-projects p {
+    color: #ffffff;
+    font-size: 1em;
+}
+
+.more-projects-button:hover {
+    background-color: #000000;
+    color: #FFD700;
+}
+
+/* Estilos generales para la sección de contacto */
+#contacto {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#contacto ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#contacto ul li {
+    display: flex;
+    align-items: center;
+}
+
+#contacto ul li a {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #4B2C34;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contacto ul li a:hover {
+    background-color: #000000;
+    color: #FFD700;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
+    /* Organiza el contenido en una columna centrada */
+    #presentacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #inicio h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    #inicio blockquote {
+        font-size: 1em;
+        max-width: 90%;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .image-container img {
+        max-width: 150px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
+    }
+
+    #sobre-mi {
+        max-width: 90%;
+        margin-top: 20px;
+        text-align: left;
+    }
+
     .navbar {
         flex-direction: column;
     }
@@ -280,21 +359,27 @@ header {
 
     #contacto ul {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    #contacto ul li a {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    #contacto ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Ocultar el header en pantallas pequeñas */
+    header {
+        display: none;
     }
 }
 
 @media (max-width: 600px) {
-    #contacto ul {
-        flex-direction: column;
-    }
-
-    #contacto ul li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     blockquote {
-        font-size: 1em; /* Reduce el tamaño en móviles */
+        font-size: 1em;
     }
 }
 
@@ -317,88 +402,4 @@ header {
 
 html {
     scroll-behavior: smooth;
-}
-
-/* Efecto de iluminación en tarjetas de proyecto */
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px 10px rgba(255, 215, 0, 0.6), /* Efecto de luz en los costados */
-                0 0 15px 5px rgba(255, 215, 0, 0.4); /* Luz menos intensa en el centro */
-}
-
-/* Estilo para el texto y botón de ver más proyectos */
-.more-projects {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.more-projects p {
-    color: #ffffff;
-    font-size: 1em;
-}
-
-.more-projects-button:hover {
-    background-color: #000000;
-    color: #FFD700;
-}
-
-/* Estilos generales para la sección de contacto */
-#contacto {
-    text-align: center;
-    margin-top: 40px;
-}
-
-#contacto ul {
-    display: flex;
-    gap: 20px;
-    flex-direction: row; /* Por defecto en fila */
-    justify-content: center;
-    margin: 20px 0;
-    padding: 0;
-    list-style: none;
-}
-
-#contacto ul li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-#contacto ul li a {
-    padding: 10px 20px;
-    background-color: #FFD700;
-    color: #4B2C34;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-#contacto ul li a:hover {
-    background-color: #000000;
-    color: #FFD700;
-}
-
-/* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-    #contacto ul {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        gap: 10px;
-    }
-
-    #contacto ul li a {
-        padding: 8px 16px; /* Ajusta el tamaño del botón */
-        font-size: 0.9em;
-    }
-
-    #contacto ul li {
-        margin-bottom: 10px;
-    }
-}
-
-/* Ocultar el header en pantallas pequeñas */
-@media (max-width: 768px) {
-    header {
-        display: none;
-    }
 }
