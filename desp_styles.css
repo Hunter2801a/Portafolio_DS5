@@ -325,3 +325,26 @@ html, body {
         text-align: right; /* Alinea la imagen a la derecha */
     }
 }
+/* Ajustes de estilo para el cuadro de estadísticas en móviles */
+@media (max-width: 750px) {
+    #estadisticas img {
+        width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        max-width: 400px; /* Limita el ancho máximo para que no se extienda demasiado */
+        height: auto;
+    }
+
+    #estadisticas {
+        padding: 0 10px; /* Añade un pequeño padding lateral */
+        text-align: center; /* Centra el contenido */
+    }
+}
+
+/* Evita zoom en móviles */
+html, body {
+    overflow-x: hidden; /* Evita desplazamiento lateral */
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
