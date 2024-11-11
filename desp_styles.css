@@ -403,3 +403,88 @@ header {
 html {
     scroll-behavior: smooth;
 }
+/* Evitar zoom y asegurar que el contenido se ajuste a la pantalla */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: #29000b;
+    padding-top: 80px;
+    overflow-x: hidden; /* Evita el desplazamiento lateral */
+}
+
+main, #presentacion, #sobre-mi, #inicio {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px; /* Ajusta los márgenes laterales en pantallas pequeñas */
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 768px) {
+    #presentacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px; /* Reduce el padding general en pantallas pequeñas */
+    }
+
+    #inicio h1 {
+        font-size: 1.8em; /* Ajusta el tamaño del nombre */
+        margin-bottom: 10px;
+    }
+
+    #inicio blockquote {
+        font-size: 1em; /* Tamaño de la frase */
+        max-width: 90%; /* Limita el ancho de la frase */
+        margin: 10px auto; /* Centra la frase */
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .image-container img {
+        max-width: 200px; /* Ajusta el tamaño de la imagen en móviles */
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
+    }
+
+    #sobre-mi {
+        max-width: 100%;
+        text-align: left;
+        padding: 0 20px; /* Añade padding lateral en "Sobre mí" */
+    }
+
+    /* Espaciado y tamaño de texto para lista de "Sobre mí" */
+    #sobre-mi ul {
+        padding-left: 0; /* Remueve el padding izquierdo */
+        margin-left: 0;
+    }
+
+    #sobre-mi ul li {
+        margin-bottom: 15px; /* Aumenta el espacio entre los elementos de la lista */
+    }
+
+    /* Asegura que el contacto esté en columna */
+    #contacto ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+/* Evitar que los usuarios puedan hacer zoom */
+html, body {
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
