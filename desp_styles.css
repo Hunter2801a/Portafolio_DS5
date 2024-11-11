@@ -10,13 +10,13 @@ body {
 }
 
 h1, h2, h3 {
-    color: #ffe100;
+    color: #ffc430;
     text-align: center; /* Centrar los títulos */
 }
 
 /* Enlaces */
 a {
-    color: #FFD700;
+    color: #ffb700;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -38,7 +38,7 @@ li {
 
 blockquote {
     font-style: italic;
-    color: #FFC0CB;
+    color: #fa7188;
     text-align: center;
     max-width: 90%;
     margin: 10px auto 20px;
@@ -68,18 +68,18 @@ blockquote {
 /* Botones de redes sociales y en general */
 .project-button, #contacto ul li a {
     padding: 10px 20px;
-    border: 2px solid #FFD700;
+    border: 2px solid #ff00bb;
     font-weight: bold;
     border-radius: 5px;
     background-color: transparent;
-    color: #FFD700;
+    color: #ffffff;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-button:hover, #contacto ul li a:hover {
-    background-color: #FFD700;
-    color: #4B2C34;
+    background-color: #ff00bb;
+    color: #ffffff;
 }
 
 /* Sección de Proyectos */
@@ -108,7 +108,7 @@ blockquote {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 15px 10px rgba(255, 215, 0, 0.6), 0 0 15px 5px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 15px 10px #ff00c399, 0 0 15px 5px #ffd70066;
 }
 
 .project-card h3 {
@@ -205,7 +205,7 @@ header {
     width: 100%;
     max-width: 250px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
+    box-shadow: 0 4px 15px #ffc430;
 }
 
 /* Estilo para el texto y botón de ver más proyectos */
@@ -220,7 +220,7 @@ header {
 }
 
 .more-projects-button:hover {
-    background-color: #000000;
+    background-color: #fffb0000;
     color: #FFD700;
 }
 
@@ -287,7 +287,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de opacidad para oscurecer más o menos */
+    background-color: #000000a0; /* Ajusta el nivel de opacidad para oscurecer más o menos */
     z-index: 1;
     border-radius: 10px;
 }
