@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #ffffff;
-    background-color: #5c0019;
+    background-color: #000000d6;
     padding-top: 80px;
     overflow-x: hidden;
 }
@@ -134,7 +134,7 @@ blockquote {
 
 /* Header y navegación */
 header {
-    background-color: #3a000f;
+    background-color: #261c1f;
     padding: 20px;
     position: fixed;
     top: 0;
