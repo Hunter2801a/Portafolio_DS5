@@ -1,3 +1,4 @@
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -131,6 +132,20 @@ blockquote {
     background-size: cover;
     background-position: center;
 }
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column; /* Apila los proyectos verticalmente */
+        align-items: center; /* Centra los proyectos horizontalmente */
+        gap: 20px; /* Mantiene un espacio uniforme entre las tarjetas */
+    }
+
+    .project-card {
+        margin: 0 auto; /* Asegura que cada tarjeta esté centrada */
+        width: 90%; /* Ajusta el ancho de las tarjetas en pantallas pequeñas */
+        max-width: 300px; /* Limita el ancho máximo */
+    }
+}
+
 
 /* Header y navegación */
 header {
