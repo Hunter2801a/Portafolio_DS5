@@ -158,6 +158,23 @@ header {
 }
 
 
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Centra los links de navegación */
+}
+
+.nav-links a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #FFB700;
+}
+
 /* Presentación */
 #presentacion {
     display: flex;
