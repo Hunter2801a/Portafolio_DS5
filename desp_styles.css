@@ -125,7 +125,7 @@ blockquote {
 
 /* Fondo con imágenes para cada tarjeta */
 .proyecto1 { background-image: url('LosOlivos.png'); }
-.proyecto2 { background-image: url('tab_periodica.jpg'); }
+.proyecto2 { background-image: url('archivosFondo.png'); }
 .proyecto3 { background-image: url('jselectronics.jpg'); }
 
 .proyecto1, .proyecto2, .proyecto3 {
