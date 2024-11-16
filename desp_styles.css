@@ -157,27 +157,6 @@ header {
     margin: 0;
 }
 
-/* Ocultar el ícono de menú hamburguesa */
-.menu-toggle {
-    display: none;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: center; /* Centra los links de navegación */
-}
-
-.nav-links a {
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    color: #FFB700;
-}
 
 /* Presentación */
 #presentacion {
